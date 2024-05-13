@@ -1,7 +1,7 @@
 import React from "react";
 
 const Post = () => {
-  return <div>Post</div>;
+  return <h1>POST</h1>;
 };
 
 export default Post;
