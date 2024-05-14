@@ -1,5 +1,3 @@
-import { Hidden } from "@mui/material";
-
 export const styles = {
   appBar: {
     borderRadius: 15,
@@ -10,7 +8,7 @@ export const styles = {
     alignItems: "center",
   },
   heading: {
-    color: "rgba(0,183,255, 1)",
+    color: "#378CE7",
   },
   image: {
     marginLeft: "20px",
