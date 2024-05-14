@@ -1,13 +1,20 @@
 import React from "react";
-
+import { useEffect } from "react";
 import momentshare from "./images/momentshare.png";
 
 import { Container, AppBar, Typography, Grow, Grid, Box } from "@mui/material";
+import { useDispatch } from "react-redux";
 import Form from "./components/Form/Form";
 import Posts from "./components/Posts/Posts";
+import { getPosts } from "./actions/posts";
 import { styles } from "./styles";
 
 const App = () => {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getPosts());
+  }, [dispatch]);
+
   return (
     <Container maxWidth="lg">
       <AppBar sx={styles.appBar} position="static" color="inherit">
