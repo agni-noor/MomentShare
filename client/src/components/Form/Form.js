@@ -1,7 +1,9 @@
 import React from "react";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
 import Filebase from "react-file-base64";
 import { Paper, TextField, Button, Typography, Box } from "@mui/material";
+import { createPosts } from "../../actions/posts";
 import { styles } from "./styles";
 
 const Form = () => {
@@ -12,7 +14,14 @@ const Form = () => {
     tags: "",
     selectedFile: "",
   });
-  const handleSubmit = () => {};
+
+  const dispatch = useDispatch();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    dispatch(createPosts(postData));
+    // console.log(postData);
+  };
   const clear = () => {};
 
   return (
@@ -87,6 +96,7 @@ const Form = () => {
             size="large"
             type="submit"
             fullWidth
+            onClick={handleSubmit}
           >
             Submit
           </Button>
