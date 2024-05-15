@@ -27,7 +27,7 @@ export const styles = {
     marginTop: "10px",
     // top: "20px",
     // left: "20px",
-    color: "black",
+    color: theme.palette.secondary.dusky,
   },
   overlay2: {
     position: "absolute",
@@ -42,9 +42,11 @@ export const styles = {
     display: "flex",
     justifyContent: "space-between",
     margin: "20px",
+    color: theme.palette.secondary.duskydark,
   },
   title: {
     padding: "0 16px",
+    color: theme.palette.secondary.medium,
   },
   cardActions: {
     padding: "0 16px 8px 16px",
@@ -52,6 +54,6 @@ export const styles = {
     justifyContent: "space-between",
   },
   button: {
-    color: "#000000",
+    color: theme.palette.primary.medium,
   },
 };

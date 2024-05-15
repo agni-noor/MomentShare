@@ -10,7 +10,10 @@ export const theme = createTheme({
     },
     secondary: {
       main: "#9BBEC8",
-      dark: "#121481",
+      medium: "#121481",
+      dark: "#0F1035",
+      dusky: "#365486",
+      duskydark: "#11235A",
     },
   },
 });

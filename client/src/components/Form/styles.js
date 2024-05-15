@@ -47,20 +47,20 @@ export const styles = {
   },
   buttonSubmit: {
     marginBottom: 1,
-    backgroundColor: theme.palette.secondary.dark,
+    backgroundColor: theme.palette.secondary.medium,
     color: theme.palette.primary.main,
     "&:hover": {
       backgroundColor: theme.palette.primary.light,
-      color: theme.palette.secondary.dark,
+      color: theme.palette.secondary.medium,
       fontWeight: "bold",
     },
   },
   buttonClear: {
     backgroundColor: theme.palette.primary.light,
-    color: theme.palette.secondary.dark,
+    color: theme.palette.secondary.medium,
     fontWeight: "bold",
     "&:hover": {
-      backgroundColor: theme.palette.secondary.dark,
+      backgroundColor: theme.palette.secondary.medium,
       color: theme.palette.primary.main,
     },
   },
