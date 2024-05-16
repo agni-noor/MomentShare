@@ -24,14 +24,14 @@ const Post = ({ post }) => {
         title={post.title}
       />
       <Box sx={styles.overlay}>
-        <Typography variant="h6">{post.name}</Typography>
+        <Typography variant="h6">{post.creator}</Typography>
         <Typography variant="body2">
           {moment(post.createdAt).fromNow()}
         </Typography>
       </Box>
 
       <Box sx={styles.overlay2}>
-        <Button style={{ color: "white" }} size="small">
+        <Button style={{ color: "white" }} size="small" onClick={() => {}}>
           <MoreHorizIcon fontSize="medium" />
         </Button>
       </Box>
@@ -48,10 +48,11 @@ const Post = ({ post }) => {
         </Typography>
       </CardContent>
       <CardActions sx={styles.cardActions}>
-        <Button size="small" sx={styles.button}>
-          <ThumbUpIcon />
+        <Button size="small" sx={styles.button} onClick={() => {}}>
+          <ThumbUpIcon fontSize="small" />
+          {post.likeCount}
         </Button>
-        <Button size="small" sx={styles.button}>
+        <Button size="small" sx={styles.button} onClick={() => {}}>
           <DeleteIcon fontSize="small" />
           Delete
         </Button>
