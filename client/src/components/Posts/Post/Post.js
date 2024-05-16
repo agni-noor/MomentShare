@@ -15,7 +15,7 @@ import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { styles } from "./styles";
 
-const Post = ({ post }) => {
+const Post = ({ post, setCurrentID }) => {
   return (
     <Card sx={styles.card}>
       <CardMedia
@@ -31,7 +31,11 @@ const Post = ({ post }) => {
       </Box>
 
       <Box sx={styles.overlay2}>
-        <Button style={{ color: "white" }} size="small" onClick={() => {}}>
+        <Button
+          style={{ color: "white" }}
+          size="small"
+          onClick={() => setCurrentID(post._id)}
+        >
           <MoreHorizIcon fontSize="medium" />
         </Button>
       </Box>

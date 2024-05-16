@@ -1,5 +1,5 @@
 import React from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import momentshare from "./images/momentshare.png";
 
 import { Container, AppBar, Typography, Grow, Grid, Box } from "@mui/material";
@@ -10,6 +10,7 @@ import { getPosts } from "./actions/posts";
 import { styles } from "./styles";
 
 const App = () => {
+  const [currentID, setCurrentID] = useState(null);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getPosts());
@@ -36,10 +37,10 @@ const App = () => {
         <Container>
           <Grid container justify="space-between" spacing={3}>
             <Grid item xs={12} sm={7}>
-              <Posts />
+              <Posts setCurrentID={setCurrentID} />
             </Grid>
             <Grid item xs={12} sm={4}>
-              <Form />
+              <Form currentID={currentID} setCurrentID={setCurrentID} />
             </Grid>
           </Grid>
         </Container>
