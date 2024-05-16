@@ -1,12 +1,12 @@
 import { theme } from "../../styles";
 
 export const styles = {
-  mainContainer: {
+  container: {
     display: "flex",
     alignItems: "center",
   },
   smMargin: {
-    margin: theme.spacing(1),
+    // margin: theme.spacing(1),
   },
   actionDiv: {
     textAlign: "center",
