@@ -33,16 +33,27 @@ const Form = ({ currentID, setCurrentID }) => {
       dispatch(createPosts(postData));
     }
 
+    clear();
+
     // console.log(postData);
   };
-  const clear = () => {};
+  const clear = () => {
+    setCurrentID(null);
+    setPostData({
+      creator: "",
+      title: "",
+      message: "",
+      tags: "",
+      selectedFile: "",
+    });
+  };
 
   return (
     <Paper sx={styles.paper}>
       <Box sx={(styles.root, styles.form)}>
         <form autoComplete="off" noValidate onSubmit={handleSubmit}>
           <Typography sx={styles.typography} variant="h6">
-            Share a Moment!
+            {currentID ? "Editing" : "Share"} a Moment!
           </Typography>
           <Box>
             <TextField

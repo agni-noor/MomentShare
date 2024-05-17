@@ -15,7 +15,12 @@ import ThumbUpIcon from "@mui/icons-material/ThumbUp";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { styles } from "./styles";
 
+import { useDispatch } from "react-redux";
+import { deletePost } from "../../../actions/posts";
+
 const Post = ({ post, setCurrentID }) => {
+  const dispatch = useDispatch();
+
   return (
     <Card sx={styles.card}>
       <CardMedia
@@ -56,7 +61,13 @@ const Post = ({ post, setCurrentID }) => {
           <ThumbUpIcon fontSize="small" />
           {post.likeCount}
         </Button>
-        <Button size="small" sx={styles.button} onClick={() => {}}>
+        <Button
+          size="small"
+          sx={styles.button}
+          onClick={() => {
+            dispatch(deletePost(post._id));
+          }}
+        >
           <DeleteIcon fontSize="small" />
           Delete
         </Button>
